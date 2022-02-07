@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 16</title>
+</head>
+<body>
+    <script>
+        let arrEl = prompt("Введите элементы массива через запятую:", '');
+        const array = arrEl.replace(/^\[([\s\S]*)]$/, '$1').split(',');
+        console.log(`Исходный массив: ${array};`);
+        const filt = (array) => array.filter((el) => el >= 99);
+        if(filt(array).length > 1)
+            console.log(`Отфильтрованный массив (его элементы больше или равны 99): ${filt(array)}`);
+        else
+            console.log(`Нет элементов, которые больше или равны 99`);
+    </script>
+</body>
+</html>
